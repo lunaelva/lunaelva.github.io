@@ -2,11 +2,11 @@
 layout: post
 title:  "첫포스트"
 author: 만
-categories: [ Jekyll, markdown ]
+categories: [ html ]
 image: assets/images/11.jpg
 featured: true
 hidden: false
-tags: [test]
+tags: [Jekyll, markdown]
 ---
 
 > 요약글은 이렇다!

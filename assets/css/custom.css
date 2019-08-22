@@ -1,0 +1,24 @@
+ul#maan_menu {
+    list-style: none;
+    top: 100px;
+    position: relative;
+    width: 100%;
+    background-color: #ffffff52;
+    padding:0px;
+}
+
+ul#maan_menu li {
+    font-size: 17px;
+    text-align: right;
+    border-bottom: 1px solid;
+    width: 100%;
+    padding: 10px;
+}
+
+ul#maan_menu li a {
+    color: #fff;
+}
+
+ul#maan_menu li span {
+    margin-left: 10px;
+}

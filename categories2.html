@@ -1,0 +1,26 @@
+---
+layout: page
+title: Categories
+header: Posts By Category
+group: navigation
+---
+
+<div>
+  {% for category in site.categories %}
+  
+  <div class="maan_category" id="{{ category[0] | replace:' ','-' }}-ref">
+    <h3>Posts in {{ category[0] | capitalize }}</h3>
+    {% assign pages_list = category[1] %}
+    {% for node in pages_list %}
+      {% if node.title != null %}
+        {% if group == null or group == node.group %}
+        <a href="{{ site.BASE_PATH }}{{node.url}}">{{node.title}}</a> 
+        <span class="text-muted">- {{ node.date | date: "%B %d, %Y" }}</span>
+        {% endif %}<br>
+      {% endif %}
+    {% endfor %}
+    {% assign pages_list = nil %}
+    </div>
+    {% endfor %}
+</div>
+

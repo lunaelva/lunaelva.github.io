@@ -38,28 +38,26 @@
 		</li>
 		{% endif %}
 	</ul>
-	<ul id="contact-list-secondary" class="list-unstyled list-inline">
-		{% if site.author.pinterest %}
-		<li>
-			<a class="btn btn-default btn-sm" href="https://pinterest.com/{{ site.author.pinterest }}">
-				<i class="fa fa-pinterest fa-lg"></i>
-			</a>
-		</li>
+	<ul id="maan_menu">
+		{% assign categories_list = site.categories %}
+		{% if categories_list.first[0] == null %}
+		  {% for category in categories_list %}
+			  <li>
+				  <a href="/categories2.html#{{ category | replace:' ','-' }}-ref">
+					{{ category | capitalize }} <span class="badge pull-right">{{ site.categories[category].size }}</span>
+				 </a>
+			  </li>
+		  {% endfor %}
+		{% else %}
+		  {% for category in categories_list %}
+			  <li>
+				  <a href="/categories2.html#{{ category[0] | replace:' ','-' }}-ref">
+					  {{ category[0] | capitalize }} <span class="badge pull-right">{{ category[1].size }}</span>
+				  </a>
+			  </li>
+		  {% endfor %}
 		{% endif %}
-		{% if site.author.linkedin %}
-		<li>
-			<a class="btn btn-default btn-sm" href="https://linkedin.com/in/{{ site.author.linkedin }}">
-				<i class="fa fa-linkedin fa-lg"></i>
-			</a>
-		</li>
-		{% endif %}
-		{% if site.author.rss %}
-		<li>
-			<a class="btn btn-default btn-sm" href="{{ site.BASE_PATH }}/{{ site.rss_path }}">
-				<i class="fa fa-rss fa-lg"></i>
-			</a>
-		</li>
-		{% endif %}
-	</ul>
+		{% assign categories_list = nil %}
+	  </ul>
 </div>
 <!-- sidebar.html end -->

@@ -42,18 +42,18 @@
 		{% assign categories_list = site.categories %}
 		{% if categories_list.first[0] == null %}
 		  {% for category in categories_list %}
-			  <li>
-				  <a href="/categories2.html#{{ category | replace:' ','-' }}-ref">
+			  <li id="menu_{{ category | replace:' ','-' }}" style="cursor: pointer">
+				  <!--<a href="/categories2.html#{{ category | replace:' ','-' }}-ref">-->
 					{{ category | capitalize }} <span class="badge pull-right">{{ site.categories[category].size }}</span>
-				 </a>
+				 <!--</a>-->
 			  </li>
 		  {% endfor %}
 		{% else %}
 		  {% for category in categories_list %}
-			  <li>
-				  <a href="/categories2.html#{{ category[0] | replace:' ','-' }}-ref">
+			  <li id="menu_{{ category[0] | replace:' ','-' }}" style="cursor: pointer">
+				 <!-- <a href="/categories2.html#{{ category[0] | replace:' ','-' }}-ref">-->
 					  {{ category[0] | capitalize }} <span class="badge pull-right">{{ category[1].size }}</span>
-				  </a>
+				 <!-- </a>-->
 			  </li>
 		  {% endfor %}
 		{% endif %}

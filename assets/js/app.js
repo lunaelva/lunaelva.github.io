@@ -38,24 +38,23 @@
       if(['/categories2.html'].indexOf(window.location.pathname) > -1) {
         var hash = window.location.hash;
         $(".maan_category").hide();
-        $("#maan_menu li a").attr("style", "");
-        $("#maan_menu li").attr("style", "");
+        $("#maan_menu li").attr("style", "cursor: pointer");
+        console.log($(hash).index());
         if(hash){
+          $("#maan_menu li:eq("+ $(hash).index()+")").attr("style","background-color: #dfede8;color: #2c3e50;font-weight: bold;");
           $(hash).show();
-          $("#maan_menu li:eq("+ $(hash).index()+")").attr("style", "background-color: #dfede8");
-          $("#maan_menu li:eq("+ $(hash).index()+") a").attr("style", "color: #2c3e50;   font-weight: bold;");
         }else{
+          $("#maan_menu li:eq(0)").attr("style", "background-color: #dfede8;color: #2c3e50;font-weight: bold;");
           $(".maan_category:eq(0)").show();
-          $("#maan_menu li:eq(0)").attr("style", "background-color: #dfede8");
-          $("#maan_menu li:eq(0) a").attr("style", "color: #2c3e50;   font-weight: bold;");
         }
       }
     }
-
     showCategoryContent();
 
-    $("#maan_menu li a").click(function(){
-      showCategoryContent();
+    $("#maan_menu li").click(function(){
+      var menuId = $(this).attr("id").split("_")[1];
+      location.href="/categories2.html#"+menuId+"-ref";
+      showCategoryContent();      
     });
   };
 

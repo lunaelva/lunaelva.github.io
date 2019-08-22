@@ -39,7 +39,6 @@
         var hash = window.location.hash;
         $(".maan_category").hide();
         $("#maan_menu li").attr("style", "cursor: pointer");
-        console.log($(hash).index());
         if(hash){
           $("#maan_menu li:eq("+ $(hash).index()+")").attr("style","background-color: #dfede8;color: #2c3e50;font-weight: bold;");
           $(hash).show();

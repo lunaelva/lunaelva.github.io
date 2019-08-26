@@ -6,17 +6,17 @@ exclude: ["README.md"] # files to exclude
 highlighter: rouge
 markdown: kramdown
 # disqus: dbyll
-# google_analytics: dbyll
-title: 메모장
+google_analytics: lunaelva
+title: 만의 메모장
 
 defaults:
   -
     scope:
       path: "" # empty string for all files
     values:
-      title:
+      title: 메모장
 
-description: 생각을 정리하고 메모 해 봅시다!
+description: 생각을 정리하고 메모해 봅시다!
 author:
   name: 만
   email: dev.lunamaan@gmail.com
@@ -24,7 +24,7 @@ author:
   #twitter: dbtek
   #pinterest: asd123
   #linkedin: asd123
-  bio: 생각을 정리하고 메모 해 봅시다!
+  bio: 봐야하는게 너무 많아 ...
   #email_md5: 726351295ec82e145928582f595aa3aa
 
 #rss_path: feed.xml

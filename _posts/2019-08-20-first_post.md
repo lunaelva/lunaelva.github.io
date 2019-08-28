@@ -28,7 +28,6 @@ tags: [Jekyll, markdown]
 
 ---
 # 텍스트 
-## 구문
 <pre>
 # h1
 ## h2
@@ -45,7 +44,6 @@ _기울여쓰기(italic)_
 
 __굵게쓰기(bold)__
 </pre>
-## 실행
 # h1
 ## h2
 ### h3
@@ -72,6 +70,7 @@ __굵게쓰기(bold)__
 ---
 
 # 블럭
+## 코드블럭
 <pre>
 ```java
 public static void main(Strign ar[]){
@@ -85,7 +84,6 @@ funciont init(){
 }
 ```
 </pre>
-## 코드블럭
 ```java
 public static void main(Strign ar[]){
     System.out.println("Hello World");
@@ -103,6 +101,7 @@ funciont init(){
 `인라인 코드 블럭`
 </pre>
 `인라인 코드 블럭`
+
 ---
 
 # 링크
@@ -124,25 +123,22 @@ URl 링크
 
 # 목록
 <pre>
-1. list item 1
-1. list item 2
-2. list item 3
-0. list item 4
-3. list item 5
+1. list1
+1. list2 item 2
+2. list3 item 3
 
-- list item 1
-    - list item 1-1
-    - list item 1-2
+- list1
+    - lista
+    - listb
 </pre>
-1. list item 1
-1. list item 2
-2. list item 3
-0. list item 4
-3. list item 5
 
-- list item 1
-    - list item 1-1
-    - list item 1-2
+1. list1
+1. list2 item 2
+2. list3 item 3
+
+- list1
+    - lista
+    - listb
 
 ---
 ## 할일목록
@@ -180,4 +176,5 @@ tr2td1 | tr2td2
 ![내 프로필](/assets/images/maan.jpg)
 </pre>
 ![내 프로필](/assets/images/maan.jpg)
+
 ---

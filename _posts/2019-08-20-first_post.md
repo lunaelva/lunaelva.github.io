@@ -28,9 +28,8 @@ tags: [Jekyll, markdown]
 
 ---
 # 텍스트 
-
+## 구문
 <pre>
-
 # h1
 ## h2
 ### h3
@@ -46,6 +45,7 @@ _기울여쓰기(italic)_
 
 __굵게쓰기(bold)__
 </pre>
+## 실행
 # h1
 ## h2
 ### h3
@@ -63,12 +63,28 @@ __굵게쓰기(bold)__
 
 ---
 # 인용문
+<pre>
 > 인용문
 >> 인용문2
-
+</pre>
+> 인용문
+>> 인용문2
 ---
 
 # 블럭
+<pre>
+```java
+public static void main(Strign ar[]){
+    System.out.println("Hello World");
+}
+```
+
+```javascript
+funciont init(){
+    console.log("Hello World");
+}
+```
+</pre>
 ## 코드블럭
 ```java
 public static void main(Strign ar[]){
@@ -83,21 +99,41 @@ funciont init(){
 ```
 
 ## 인라인 코드 블럭
+<pre>
 `인라인 코드 블럭`
-
+</pre>
+`인라인 코드 블럭`
 ---
 
 # 링크
+<pre>
+인라인
+[Google](http://www.google.co.kr “구글”)
+
+URl 링크
+<http://google.com/>
+</pre>
+
 인라인
 [Google](http://www.google.co.kr “구글”)
 
 URl 링크
 <http://google.com/>
 
-
 ---
 
 # 목록
+<pre>
+1. list item 1
+1. list item 2
+2. list item 3
+0. list item 4
+3. list item 5
+
+- list item 1
+    - list item 1-1
+    - list item 1-2
+</pre>
 1. list item 1
 1. list item 2
 2. list item 3
@@ -110,6 +146,12 @@ URl 링크
 
 ---
 ## 할일목록
+<pre>
+- [x] 이거했니? 
+- [x] 저거했니? 
+- [x] 그거는?
+- [ ] ????
+</pre>
 - [x] 이거했니? 
 - [x] 저거했니? 
 - [x] 그거는?
@@ -118,16 +160,24 @@ URl 링크
 ---
 
 # 테이블 
-
-First Header | Second Header
+<pre>
+th1 | th2
 ------------ | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
+tr1td1 | tr1td2
+tr2td1 | tr2td2
+</pre>
+
+th1 | th2
+------------ | -------------
+tr1td1 | tr1td2
+tr2td1 | tr2td2
 
 ---
 
 
 # 이미지
+<pre>
 ![내 프로필](/assets/images/maan.jpg)
-
+</pre>
+![내 프로필](/assets/images/maan.jpg)
 ---

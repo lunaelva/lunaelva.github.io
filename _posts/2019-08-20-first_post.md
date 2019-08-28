@@ -29,6 +29,23 @@ tags: [Jekyll, markdown]
 ---
 # 텍스트 
 
+<pre>
+
+# h1
+## h2
+### h3
+#### h4
+##### h5
+###### h6
+
+*기울여쓰기(italic)*
+
+_기울여쓰기(italic)_
+
+**굵게쓰기(bold)**
+
+__굵게쓰기(bold)__
+</pre>
 # h1
 ## h2
 ### h3

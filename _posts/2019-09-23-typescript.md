@@ -78,6 +78,65 @@ sum('x', 'y');
 간혹 실무에서 json 값으로 받아 오는 숫자형 데이터 연산시 parseInt로 형변환 해주지 않으면 1+2 연산 값이 12가 되어 버리는 현상이 나타 나는데 
 type을 지정해서 사용해 주면 이런 오류는 좀 줄어 들지 않을까 생각 됩니다.
 
+#### Typescript 기본 타입
+Typescript는 부울 (Boolean), 숫자형 (Number), 문자열 (String), 배열 (Array), 튜플 (Tuple), 열거 (Enum), Any, Void, Never 등의 타입을 지정할 수 있습니다.
+
+1. 부울 (Boolean), 숫자형 (Number), 문자열 (String)<br>
+TypeScript는 10진수 및 16진수와 함께 ECMAScript2015에 도입된 2진수 및 8진수 문자를 지원합니다.
+문자열의 경우 템플릿 문자열을 사용 할 수도 있는데 이 문자열은 백틱 / 백 쿼트 (` ) 문자로 감싸져 있으며 포함된 표현식은 ${ 표현식 } 형식입니다. 
+```typescript
+let isDone: boolean = false;
+let decimal: number = 6;
+let hex: number = 0xf00d;
+let binary: number = 0b1010;
+let octal: number = 0o744;
+let color: string = "blue";
+let fullName: string = `Bob Bobbington`;
+let sentence: string = `Hello, my name is ${ fullName }.`
+```
+
+2. 배열 (Array)<br>
+배열은 제네릭 형태로도 선언 가능합니다.
+```typescript
+let list: number[] = [1, 2, 3];
+let list: Array<number> = [1, 2, 3];
+```
+
+3. 튜플 (Tuple)<br>
+서로 다른 타입의 배열을 만들때 사용 하고, 지정한 자리에는 꼭 그 타입이 선언되어야 합니다.
+```typescript
+// 튜플 타입 선언
+let x: [string, number];
+// 초기화
+x = ["hello", 10]; // 좋아요
+// 부정확한 초기화
+x = [10, "hello"]; // 오류 - 지정한 타입과 다른 값이 들어 감.
+```
+
+4. 열거 (Enum)<br>
+Enum 타입이 사용 가능 한데 자바에서 사용 하듯이 동일하게 사용됩니다.<br>
+```typescript
+enum Color {Red, Green, Blue}
+let c: Color = Color.Green;
+//보통 0부터 시작 하지만 1부터 시작하도록 설정
+enum Color {Red=1, Green, Blue}
+let c: Color = Color.Green;
+//숫자값 지정도 가능
+enum Color {Red=2, Green=3, Blue=6}
+let c: Color = Color.Green;
+```
+
+5. Any<br>
+어플리케이션을 작성할 때 알지 못하는 변수의 타입을 설명해야 할 수도 있습니다.
+모든 타입을 받을 수 있도록 선언하는 타입입니다.
+```typescript
+let notSure: any = 4;
+notSure = "문자열일수도 있다";
+notSure = false; // 좋아요, 확실한 boolean
+let list: any[] = [1, true, "free"];
+list[1] = 100;
+```
+
 ### 객체지향프로그래밍 지원
 클래스, 인터페이스, 상속등을 지원합니다.
 <br><br>

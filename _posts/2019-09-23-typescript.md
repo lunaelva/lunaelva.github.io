@@ -20,7 +20,7 @@ typescript에 대해 궁금해서 찾아 보았습니다.
 첫번째는 마소에서 만들었고, 두번째는 마소에서 만들었기 때문에 요새 많이들 쓰고 있는 vscode랑 호환이 잘된다고 합니다.
 
 그리고 당연히 마소에서 만들었으니... 마소에서 사용할 것이고, 페이팔에서도 사용 중이라고 합니다.
-
+<br><br>
 ## Typescript 란?
 Typescript는 대규모 프로젝트에 javascript가 적합하지 않다는 문제점을 보완하기 위해 만들어진 언어로 자바스크립트(ES5)의 Superset(상위확장)입니다.
 
@@ -29,12 +29,20 @@ Microsoft에서 2012년 발표한 오픈소스이고 정적 타이핑을 지원�
 ![출처: https://poiemaweb.com/typescript-introduction](/assets/images/posts/typescript-superset.png)
 
 > Typescript의 목표는 "클래스, 모듈, 정적 타입과 같은 것들을 통해 JavaScript를 강화하는 것" 이며, open-standard 나 크로스 플랫폼에 대한 이점을 포기하지 않는 것이고, 그 결과로 "JavaScript 개발 범위의 어플리케이션을 위한 언어"가 되었고, JavaScript 의 상위언어집합(superset)이 되었습니다.
-
-일반적으로 사용 하고 있는 javascript는 인터프리터지만 타입스크립트는 컴파일 언어입니다. 
-
-Typescript 코드를 생성해서 컴파일 해보면 결국 js 파일이 생성 되는데요. 그럼 Typescript를 사용 하는 이유는 뭘까요? 
  
+ <br><br>
 ## Typescript 특징
+### 컴파일 언어
+javascript는 인터프리터 언어입니다. 코드를 생성 하고 실행이 되어야지만 오류가 있는지 확인 할 수 있지요. 
+
+하지만 Typescript의 경우 코드를 컴파일할 때 구문 오류를 발견하면 컴파일 오류를 발생시킵니다.
+
+컴파일 후 동일한 이름의 스크립트 파일이 생성 되는데, 오류가 발생해도 js 파일을 생성은 해 줍니다. 
+
+이 파일은 문제가 있는 파일이다 라고 경고 해주는 역할을 해 주는 것이지요!
+
+
+### type지정 언어
 Typescript를 쉽게 설명하자면 javascript에 type을 지정해서 사용 한다는 것입니다.
 
 javascript의 var, let, const 대신 string이나 number 같은 자료형을 지정해 줌으로써 컴파일시 안정성을 확보해 줍니다.
@@ -70,6 +78,11 @@ sum('x', 'y');
 간혹 실무에서 json 값으로 받아 오는 숫자형 데이터 연산시 parseInt로 형변환 해주지 않으면 1+2 연산 값이 12가 되어 버리는 현상이 나타 나는데 
 type을 지정해서 사용해 주면 이런 오류는 좀 줄어 들지 않을까 생각 됩니다.
 
+### 객체지향프로그래밍 지원
+클래스, 인터페이스, 상속등을 지원합니다.
+<br><br>
+
+
 ## 간단한 설치 방법
 npm을 위해 노드를 설치 해야 하지만 전 npm이 설치 되어 있으니 생략합니다..
 
@@ -78,7 +91,7 @@ npm을 위해 노드를 설치 해야 하지만 전 npm이 설치 되어 있으�
 전 그냥 위와 같이 설정 했는데요 -D면 devDependency로 설치 되고 -g는 global로 설치가 되는 옵션이니 참고 바랍니다.
 
 typescript 설치후 아래와 같은 예제 파일을 만들어 봤습니다.
-
+#### Typescript 파일 작성
 ```typescript
 class Coffes {
     name : string;
@@ -95,12 +108,14 @@ function coffeeInfo(name : string, price : number){
     return "name : " + name + ", price : " + price;
 }
 ```
-간단하게 클래스와 생성자 , 메소드가 있는 예제를 typescriptTest.ts 라는 파일로 만들고 실행을 시키면
-같은 이름의 js 파일이 생성 되는 걸 볼 수 있습니다.
+간단하게 클래스와 생성자 , 메소드가 있는 예제를 만들었습니다.
 
-실행
+#### 컴파일
 > tsc typescriptTest.ts
 
+파일은 .ts 로 만들었지만 내용은 javascript로 이루어져 있습니다.
+
+컴파일이 완료 되면 같은 이름의 js 파일이 생성 되는 걸 볼 수 있습니다.
 ###### 생성된 화면
 
 ![출처: 내가 한 캡처](/assets/images/posts/190926_typescript2.jpg)
@@ -134,3 +149,5 @@ function coffeeInfo(name, price) {
 - https://poiemaweb.com/typescript-introduction 
 - https://han41858.tistory.com/14
 - https://velog.io/@dongwon2/TypeScript%EB%A5%BC-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%EC%A0%84%EC%97%90-%EC%9D%B4%EC%A0%95%EB%8F%84%EB%8A%94-%ED%95%B4%EC%A4%98%EC%95%BC%EC%A7%80
+- https://proimaginer.tistory.com/17
+- https://typescript-kr.github.io/pages/tutorials/TypeScript%20in%205%20minutes.html

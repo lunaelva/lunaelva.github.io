@@ -9,8 +9,7 @@ tags: [microservice, docker]
 ---
 
 > 마이크로 서비스 관련 공부를 위하여 docker 설치를 하는데 내 노트북은 windows10 home 버전이었다. 
-windows10  home은 hyper-v 지원이 안되기 때문에 일반 적인 방법으로는 docker 설치가 안되다 .....
-그래서 설치는 한번 하고 말면 나중에 또 검색해야 하니 블로그로 정리 했다.
+windows10  home은 hyper-v 지원이 안되기 때문에 일반 적인 방법으로는 docker 설치가 되지 않아 나중에 또 설치 할 때 보기 위해 정리해 봄.
 
 
 1. 작업관리자 > 성능 을 열어 가상화가 사용 중인지 확인.

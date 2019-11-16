@@ -20,7 +20,6 @@ https://github.com/docker/toolbox/releases
 DockerToolbox-19.03.1 버전 설치.
 
 3. 다운 받은 DockerToolbox-19.03.1 실행후 쭉쭉 진행!
-![출처: 내가 한 캡처](/assets/images/posts/191116_docker1.jpg)
 ![출처: 내가 한 캡처](/assets/images/posts/191116_docker2.jpg)
 ![출처: 내가 한 캡처](/assets/images/posts/191116_docker3.jpg)
 ![출처: 내가 한 캡처](/assets/images/posts/191116_docker4.jpg)

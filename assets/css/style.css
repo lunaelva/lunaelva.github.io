@@ -189,3 +189,8 @@ ul.dropdown-menu>li>a>i.fa {
     width: 1.3em;
 }
 
+.article_body blockquote p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #696565;
+}

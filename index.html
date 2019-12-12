@@ -25,6 +25,7 @@ tagline:
 
   <div>
     {% if post.fullview %}
+    111111
     {{ post.content }}
     {% else %}
     {% if post.shortinfo %}
@@ -32,14 +33,14 @@ tagline:
     {% elsif post.description %}
     {{ post.description }}
     {% else %}
-    {{ post.excerpt }}
+    {{ post.excerpt | strip_html | truncatewords: 75 }}
     {% endif %}
     {% endif %}
   </div>
 
 </article>
-{% endfor %}
 <hr/>
+{% endfor %}
 
 <ul class="pager"> 
 

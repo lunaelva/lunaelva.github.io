@@ -6,3 +6,4 @@ group :jekyll_plugins do
   gem "pygments.rb"
 end
 
+gem 'bundler','~>2.5.22'
